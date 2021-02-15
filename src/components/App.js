@@ -17,6 +17,7 @@ class App extends Component {
     *   Web3Modal+MetaMask,
     *   MetaMask.
   */ 
+  
   async init() {
     // Declare WalletConnect
     const providerOptions = {
@@ -41,12 +42,6 @@ class App extends Component {
       let network, balance, web3
 
       window.ethereum.autoRefreshOnNetworkChange = false;
-
-      //Update address&account when MM user change account
-      //Coding Flag 5
-
-      //Update chainID when after user modification
-      //Coding Flag 5
     }
   }
   /**
@@ -134,13 +129,13 @@ class App extends Component {
   
   event.preventDefault()
 
-  //Flag 6
+  //Flag 4
 
     if(this.provider===null && !this.account) {
       window.alert('Error')
     } else if (this.provider.isMetaMask || this.provider ===null) { //MetaMask
 
-    //Flag 7
+    //Flag 5
 
     } 
   }
@@ -158,7 +153,6 @@ class App extends Component {
 
     this.on = this.on.bind(this)
     this.off = this.off.bind(this)
-    //this.send = this.send.bind(this)
 
   }
 
